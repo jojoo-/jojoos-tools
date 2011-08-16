@@ -5,6 +5,9 @@ they might be of use for you, or they don't.
 Contact me for any questions.
 
 
-
+for console use:
 sshvm.expect: A tool to connect to a OpenVZ VE not reachable via ssh.
+
+for geektools:
 ip_mac.sh: A script to print all IPs (on OS/X): Ethernet, Wireless, External
+downloads.py: A script to display pyload status and captchatrader.com credits
