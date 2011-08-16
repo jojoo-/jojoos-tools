@@ -18,5 +18,11 @@ then
 else
     echo "Airport :  INACTIVE"
 fi
-echo -n "External:  "
-curl --silent http://checkip.dyndns.org | awk '{print $6}' |cut -f 1 -d "<"
+
+external=`curl --silent http://checkip.dyndns.org | awk '{print $6}' | cut -f 1 -d "<"`
+if [ "$external" != "" ]
+then
+    echo "External: $external"
+else
+    echo "no internet"
+fi
