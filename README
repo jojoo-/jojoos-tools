@@ -7,6 +7,7 @@ Contact me for any questions.
 
 for console use:
 sshvm.expect: A tool to connect to a OpenVZ VE not reachable via ssh.
+jabbermessage.py A small tool to send a jabber message to someone.
 
 for geektools:
 ip_mac.sh: A script to print all IPs (on OS/X): Ethernet, Wireless, External
