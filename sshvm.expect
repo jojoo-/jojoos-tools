@@ -1,0 +1,28 @@
+#!/usr/bin/expect
+# small tool to connect to a host via ssh, enter a 
+# OpenVZ VE (named by the argument) and enter screen there
+
+
+set timeout 1
+set cmd {uname -a}
+
+spawn ssh USER@HOST.org
+expect_after eof { exit 0 }
+
+
+## ssh stuff
+expect "yes/no" { send "yes\r" }
+
+
+## command(s) on HN
+send "vzctl enter $argv\r"
+
+##commands in  VM
+send "if screen -r; then sleep 1; else screen zsh; fi;\r"
+
+
+#finally: leave the shell to the user
+
+interact
+
+
